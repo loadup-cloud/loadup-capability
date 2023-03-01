@@ -1,0 +1,65 @@
+package com.github.loadup.capability.common.enums;
+
+import java.util.Arrays;
+
+public enum LoggerLevel implements IEnum {
+
+    /**
+     * DEBUG
+     */
+    DEBUG("DEBUG", "debug级别的日志输出"),
+
+    /**
+     * INFO
+     */
+    INFO("INFO", "info级别的日志输出"),
+
+    /**
+     * INFO
+     */
+    WARN("WARN", "warn级别的日志输出"),
+
+    /**
+     * ERROR
+     */
+    ERROR("ERROR", "error级别的日志输出");
+
+    /**
+     * 码Code
+     */
+    private final String code;
+
+    /**
+     * 描述
+     */
+    private final String description;
+
+    LoggerLevel(String code, String description) {
+        this.code = code;
+        this.description = description;
+    }
+
+    /**
+     * 通过枚举code获得枚举。
+     *
+     * @param code 码
+     * @return 枚举
+     */
+    public static LoggerLevel getByCode(String code) {
+        return Arrays.stream(values()).filter(each -> each.getCode().equals(code)).findFirst().orElse(null);
+    }
+
+    /**
+     * @return Returns the code.
+     */
+    public String getCode() {
+        return code;
+    }
+
+    /**
+     * @return Returns the description.
+     */
+    public String getDescription() {
+        return description;
+    }
+}
