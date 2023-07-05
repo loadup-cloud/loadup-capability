@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.loadup.capability</groupId>
+    <parent>
+        <artifactId>loadup-capability-parent</artifactId>
+        <groupId>com.github.loadup.capability</groupId>
+        <relativePath>../pom.xml</relativePath>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
     <artifactId>loadup-common-lang</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,14 +45,4 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>ygg-releases</id>
-            <url>https://packages.aliyun.com/maven/repository/2236759-release-mIrCc6/</url>
-        </repository>
-        <snapshotRepository>
-            <id>ygg-snapshots</id>
-            <url>https://packages.aliyun.com/maven/repository/2236759-snapshot-5GGsan/</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
