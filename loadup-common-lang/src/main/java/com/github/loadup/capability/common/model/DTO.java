@@ -27,7 +27,6 @@ package com.github.loadup.capability.common.model;
  */
 
 import com.github.loadup.capability.common.util.ToStringUtils;
-
 import java.io.Serializable;
 
 /**
@@ -41,6 +40,6 @@ public abstract class DTO implements Serializable {
 
     @Override
     public String toString() {
-        return ToStringUtils.toString(this);
+        return ToStringUtils.reflectionToString(this);
     }
 }

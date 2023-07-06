@@ -34,7 +34,7 @@ public final class ToStringUtils {
         ToStringBuilder.setDefaultStyle(ToStringStyle.JSON_STYLE);
     }
 
-    public static String toString(Object object) {
+    public static String reflectionToString(Object object) {
         return ToStringBuilder.reflectionToString(object);
     }
 }
