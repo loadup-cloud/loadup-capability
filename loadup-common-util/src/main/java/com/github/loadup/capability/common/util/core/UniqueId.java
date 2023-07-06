@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author huangshang
+ *
  */
 public class UniqueId {
     private static final Logger        log    = LoggerFactory.getLogger(UniqueId.class);

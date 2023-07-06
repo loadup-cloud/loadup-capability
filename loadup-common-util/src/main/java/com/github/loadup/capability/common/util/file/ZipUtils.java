@@ -20,9 +20,6 @@ import org.springframework.util.StreamUtils;
  * <p>
  * 文件与ZIP文件之间的转换
  * </p>
- *
- * @author HGS-liuchao
- * @version $Id: FilesToZipUtil.java,v 0.1 2007-12-13 下午09:31:52 liuchao Exp $
  */
 
 public class ZipUtils {

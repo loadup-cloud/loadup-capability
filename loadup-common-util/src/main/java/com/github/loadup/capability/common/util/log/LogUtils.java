@@ -43,10 +43,6 @@ import org.slf4j.Logger;
  *
  * <p>
  *
- * @author peng.lanqp
- * @author wuhui
- * @author yanbest.zhangy 增加全链路压测标识
- * @version $Id: LogUtil.java, v 0.3 2015年5月6日 上午10:20:44 yanbest.zhangy Exp $
  * @notice <li>ERROR日志记录尽量使用{@link ExceptionLogUtil}，避免日志的重复记录
  * <li>报警日志记录请使用{@link AlertLogUtil}，只记录一些非常关键的异常信息
  * <li>日志记录支持数组参数，禁止使用“+”拼接入参，全部使用“,”由工具自行拼接
@@ -193,7 +189,7 @@ public class LogUtils {
 
     /**
      * 生成输出到日志的字符串
-     * <p>输出格式:[sofaId][messageName]objs...
+     * <p>输出格式:[messageName]objs...
      *
      * @param messageName 报警日志的标题
      * @param objs        任意个要输出到日志的参数
@@ -239,7 +235,7 @@ public class LogUtils {
     }
 
     /**
-     * 获取sofa上下文的调用id。
+     * 获取上下文的调用id。
      *
      * @return 调用id
      */

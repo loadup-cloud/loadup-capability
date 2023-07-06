@@ -38,8 +38,8 @@ import java.util.Currency;
  *
  * TODO: 必须处理运算中的溢出情形
  *
- * @author Cheng Li
- * @version $Id: Money.java,v 1.1 2005/11/08 14:01:56 calvin Exp $
+ *
+ *
  */
 public class Money implements Serializable, Comparable {
 

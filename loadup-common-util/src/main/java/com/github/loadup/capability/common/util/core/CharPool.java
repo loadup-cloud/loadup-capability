@@ -28,8 +28,6 @@ package com.github.loadup.capability.common.util.core;
 
 /**
  * char 常量池
- *
- * @author L.cm
  */
 public interface CharPool {
     // @formatter:off

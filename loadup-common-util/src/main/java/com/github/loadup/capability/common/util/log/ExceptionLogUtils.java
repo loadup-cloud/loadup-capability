@@ -33,15 +33,11 @@ import org.slf4j.LoggerFactory;
 /**
  * 捕捉到异常的时候，我们通常会使用<code>logger.error("xxxx",e)</code>方式打印日常堆栈日志<br>
  * 但是这种方式会造成错误日志打印两遍，精益求精，日志也追求极致，错误日志尽量使用本工具类输出。
- *
- * @author peng.lanqp
- * @author wuhui
- * @version $Id: ExceptionLogUtil.java, v 0.2 2014-5-14 下午6:12:15 peng.lanqp Exp $
  */
 public final class ExceptionLogUtils {
 
     /**
-     * errorLogger，sofa框架默认生成的
+     * errorLogger
      */
     private static final Logger logger = LoggerFactory.getLogger("ERROR");
 

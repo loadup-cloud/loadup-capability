@@ -28,8 +28,6 @@ package com.github.loadup.capability.common.util.core;
 
 /**
  * 静态 String 池
- *
- * @author L.cm
  */
 public interface StringPool {
     // @formatter:off
