@@ -1,8 +1,8 @@
-package com.github.loadup.capability.common.constant;
+package com.github.loadup.capability.common.test;
 
 /*-
  * #%L
- * loadup-common-lang
+ * loadup-components-retrytask
  * %%
  * Copyright (C) 2022 - 2023 loadup_cloud
  * %%
@@ -12,10 +12,10 @@ package com.github.loadup.capability.common.constant;
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,6 +26,22 @@ package com.github.loadup.capability.common.constant;
  * #L%
  */
 
-public interface CommonConstants {
+import java.util.Date;
+import org.apache.commons.lang3.time.DateFormatUtils;
+import org.junit.jupiter.api.Assertions;
+
+public class BaseTest {
+    protected String formatDate(Date date) {
+        return DateFormatUtils.format(date, "yyyyMMddHHmmss");
+    }
+
+    protected void assertDateEquals(Date expected, Date actual) {
+        assertDateEquals(expected, actual, 5);
+    }
+
+    protected void assertDateEquals(Date expected, Date actual, int limit) {
+        long i = Long.parseLong(formatDate(expected)) - Long.parseLong(formatDate(actual));
+        Assertions.assertTrue(Math.abs(i) <= limit);
+    }
 
 }
